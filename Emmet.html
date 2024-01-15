@@ -1,0 +1,231 @@
+<!-- 
+link:https://docs.emmet.io/cheat-sheet/
+
+    Emmet is built-in in Visual Code and yu can sart using it immediately
+in a html page.
+
+Emmet is essentially a bunch of different shortcuts and snippets where you type a
+small amount of code and a bunch of code is generated for you; for example typing
+an '!' exclamation point and hiting enter generates a boiler platte for you.-->
+
+<!--Type '!' hit Enter and it generates a Boiler Plate Html for you-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<!--Generate a html tag; type 'elementName'. Example type 'span' or 'div' or 'a' hit Enter-->
+
+<span></span>
+
+<!--To attach a specific class to a tag type 'elementName.className' example: 
+    'span.class1' hit Enter-->
+
+<span class="class1"></span>
+
+<!--To attach a specific id to a tag type 'elementName#idName' example: 
+    'span#id1' hit Enter-->
+
+<span id="id"></span>
+
+<!--To attach a multiple clases and specific id to a tag type 
+    'elementName.class1.claass2#idName' example: 'div.class1.class2#id-div-1' hit Enter-->
+
+<div class="class1 class2" id="id-div-1"></div>
+
+<!--div is the most common element so if you type '.class1' it will autmatically 
+create a div element and assign it that class-->
+
+<div class="class1"></div>
+
+
+<!--If you type 'link' and hit enter it generates:  <link rel="stylesheet" href="">.
+It automatically assumes its a style sheet and provides the href attribute for it
+as well.
+-->
+
+<link rel="stylesheet" href="">
+
+<!--We can also add attribute to an element.
+    Syntax: elementName[attributeName = "value"] 
+    example: button[type="button"]
+-->
+
+<button type="button"></button>
+
+<!--
+    Syntax: elementName[datatselected] 
+    example: div[data-selected]
+-->
+
+<div data-selected=""></div>
+
+<!--
+    Syntax: elementName[datatselected] 
+    example: div[data-selected].class1
+-->
+
+<div data-selected="" class="class1"></div> <!--places the cursor in between data-selected quotes. 
+By pressing tab it moves us to the next empty attribute or in between the tag elements.-->
+
+<!--Creating a child Element. Use greator than '>' symbol
+    Syntax: elementName[datatselected]>elementName.className
+    example: section[data-selected]>div.class1
+-->
+
+<section data-selected="">
+    <div class="class1"></div>
+</section>
+
+<!--
+    Syntax: elementName>elementName>elementName
+    example: header>nav>ul
+-->
+
+<header>
+    <nav>
+        <ul></ul>
+    </nav>
+</header>
+
+
+<!--If you want to generate the same element more than one time than use a styeric '*' symbol
+    Syntax: elementName>elementName>elementName>elementName*5
+    example: header>nav>ul>li*5
+-->
+
+<header>
+    <nav>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </nav>
+</header>
+
+
+<!-- For adding text inside an element you need to use '{}' curly brackets.
+    Syntax: elementName>elementName>elementName>elementName*5{I am learning emmet}
+    example: header>nav>ul>li*5{I am learning emmet}
+-->
+
+<header>
+    <nav>
+        <ul>
+            <li>I am learning emmet</li>
+            <li>I am learning emmet</li>
+            <li>I am learning emmet</li>
+            <li>I am learning emmet</li>
+            <li>I am learning emmet</li>
+        </ul>
+    </nav>
+</header>
+
+<!-- For adding sequential numbers as text inside an element we use '$' symbol.
+    Syntax: elementName>elementName>elementName>elementName*5{I am learning emmet $}
+    example: header>nav>ul>li*5{I am learning emmet $}
+-->
+
+<header>
+    <nav>
+        <ul>
+            <li>I am learning emmet 1</li>
+            <li>I am learning emmet 2</li>
+            <li>I am learning emmet 3</li>
+            <li>I am learning emmet 4</li>
+            <li>I am learning emmet 5</li>
+        </ul>
+    </nav>
+</header>
+
+<!-- For adding sequential numbers with 0 padding as text inside an element we use '$$' symbol.
+    Syntax: elementName>elementName>elementName>elementName*3{I am learning emmet $$}
+    example: header>nav>ul>li*3{I am learning emmet $$}
+-->
+
+<header>
+    <nav>
+        <ul>
+            <li>I am learning emmet 01</li>
+            <li>I am learning emmet 02</li>
+            <li>I am learning emmet 03</li>
+        </ul>
+    </nav>
+</header>
+
+<!-- We can even use $ symbol with classes.
+    Syntax: elementName>elementName>elementName>elementName*3.className-${I am learning emmet $}
+    example: header>nav>ul>li*3.class-${I am learning emmet $}
+-->
+
+<header>
+    <nav>
+        <ul>
+            <li class="class1">I am learning emmet 1</li>
+            <li class="class2">I am learning emmet 2</li>
+            <li class="class3">I am learning emmet 3</li>
+        </ul>
+    </nav>
+</header>
+
+
+<!-- To create siblings i emmet we use '+' symbol
+    Syntax: elementName+elementName+elementName
+    example: header+main+footer
+-->
+
+<header></header>
+<main></main>
+<footer></footer>
+
+
+<!-- How to create siblings as a child in an element
+    Syntax: elementName>elementName+elementName
+    example: header>main+footer
+-->
+
+<header>
+    <main></main>
+    <footer></footer>
+</header>
+
+
+<!-- How to create siblings and add child elements within a sibiling. 
+    To exit we use carret '^' symbol.
+    Syntax: elementName>elementName^elementName+elementName
+    example: header>nav^main+footer
+-->
+
+<header>
+    <nav></nav>
+</header>
+<main></main>
+<footer></footer>
+
+
+<!-- How to create siblings and add child elements within a sibiling. 
+    To exit we use carret '^' symbol or we can also use the grouping charachter.
+    Syntax: (elementName>elementName)+elementName+elementName
+    example: (header>nav)+main+footer.
+-->
+
+<header>
+    <nav></nav>
+</header>
+<main></main>
+<footer></footer>
+
+<!--form:post
+
+some elements have multiple emmet abreviations-->

@@ -1,0 +1,39 @@
+/*
+at 6:07 that's called trigger suggest and in vscode you can press ctrl+space (or command+space in mac) to bring it up without having to hit backspace
+it's not only for emmet snippets it also works for just about anything with intellisense
+*/
+
+
+/*
+fz.925r+lh1.45+p2e+m1r+df+fxd:c+bgc:black+c:#ff
+*/
+
+.card{
+    font-size: 0.925rem;            /*fz.925r*/
+    line-height: 1.45;              /*lh1.45*/
+    padding: 2em;                   /*p2e*/
+    margin: 1rem;                   /*m1r*/
+    display: flex;                  /*df*/
+    flex-direction: column;         /*fxd:c*/
+    background-color: black;      /*bgc:black*/
+    color: #fff;                  /*c:#ff*/
+
+}
+
+body{
+
+    margin: 0; /*m0*/
+
+}
+
+.container{
+/*p2r+w100p+ma75r+m0-10r*/
+
+    padding: 2rem; /*p2r*/
+    width: 100%;  /*w100p*/
+    max-width: 75rem; /*ma75r*/
+    margin: 0 10rem;  /*m0-10r*/
+    margin: 0 auto; /*m0-auto*/
+
+}
+
